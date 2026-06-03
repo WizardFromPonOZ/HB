@@ -46,14 +46,14 @@
         body {
             background-color: #000000;
             color: #ffff00;
-            /* ФИКС ШРИФТОВ: Добавлены Arial Black и Impact + жирнота 900 на максимум для мобилок */
-            font-family: "Comic Sans MS", "Arial Black", "Impact", cursive, sans-serif;
+            /* Теперь Impact на первом месте — он гарантирует мощный цельный текст на любом мобильном */
+            font-family: "Impact", "Arial Black", "Comic Sans MS", cursive, sans-serif;
             font-weight: 900; 
             text-align: center;
             margin: 0;
             padding: 0;
             overflow-x: hidden;
-            
+            cursor: url('https://cur.cursors-4u.net/symbols/sym-8/sym763.ani'), url('https://cur.cursors-4u.net/symbols/sym-8/sym763.gif'), auto;
         }
 
         /* СТИЛИ ДЛЯ ПРОЦЕДУРНЫХ РЕТРО-ЗВЕЗД */
@@ -112,10 +112,22 @@
         }
 
         @keyframes rainbow-text {
-            0% { color: #ff00ff; text-shadow: 5px 5px 0px #ff0000, -5px -5px 0px #00ff00; }
-            33% { color: #00ffff; text-shadow: 5px 5px 0px #0000ff, -5px -5px 0px #ffff00; }
-            66% { color: #ffff00; text-shadow: 5px 5px 0px #ff00ff, -5px -5px 0px #00ffff; }
-            100% { color: #ff00ff; text-shadow: 5px 5px 0px #ff0000, -5px -5px 0px #00ff00; }
+            0% { 
+                color: #ff00ff; 
+                text-shadow: 2px 2px 0px #ff0000, -2px -2px 0px #00ff00; 
+            }
+            33% { 
+                color: #00ffff; 
+                text-shadow: 2px 2px 0px #0000ff, -2px -2px 0px #ffff00; 
+            }
+            66% { 
+                color: #ffff00; 
+                text-shadow: 2px 2px 0px #ff00ff, -2px -2px 0px #00ffff; 
+            }
+            100% { 
+                color: #ff00ff; 
+                text-shadow: 2px 2px 0px #ff0000, -2px -2px 0px #00ff00; 
+            }
         }
 
         .pic {

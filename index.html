@@ -382,7 +382,7 @@
             
             // СЕЙЧАС СТОИТ 60 (Воспроизведение с 1-й минуты для тестов фаз)
             // Перед релизом Лизы ОБЯЗАТЕЛЬНО поменяй 60 на 0, чтобы трек играл сначала!
-            audio.currentTime = 60; 
+            audio.currentTime = 0; 
             
             const playPromise = audio.play();
             if (playPromise !== undefined) {
@@ -403,15 +403,16 @@
                 const gifs = document.getElementById('gifs');
                 let currentState = 0;
 
-                if (t < 90) {
+                // ВЫЧЛИ 60 СЕКУНД ИЗ КАЖДОГО ПОРОГА ВРЕМЕНИ
+                if (t < 30) {
                     currentState = 1;
-                } else if (t >= 90 && t < 150) {
+                } else if (t >= 30 && t < 90) {
                     currentState = 2;
-                } else if (t >= 150 && t < 203) {
+                } else if (t >= 90 && t < 143) {
                     currentState = 3;
-                } else if (t >= 203 && t < 288) {
+                } else if (t >= 143 && t < 228) {
                     currentState = 4;
-                } else if (t >= 288) {
+                } else if (t >= 228) {
                     currentState = 5;
                 }
 
